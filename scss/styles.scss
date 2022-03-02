@@ -1,0 +1,151 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.headerNav {
+    background-color: #003476;
+    grid-area: header;
+}
+
+.gridContainer {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 95%;
+    height: 95%;
+    display: grid;
+    margin: 0 auto;
+    grid-template: repeat(6, auto) / repeat(2, auto);
+    grid-template-areas:
+        "header header"
+        "sidebar sidebar"
+        "article-c3 article-c3"
+        "article-c4 article-c4"
+        "article-c5 article-c5";
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+        grid-template: repeat(3, auto) / repeat(2, auto);
+        grid-template-areas:
+            "header header"
+            "sidebar article-c3"
+            "article-c4 article-c5";
+    }
+    @media screen and (min-width: 800px) {
+        width: 51%;
+        height: 54%;
+        grid-template: repeat(2, 3fr) / repeat(3, 2fr);
+        grid-template-areas:
+            "header header sidebar"
+            "article-c3 article-c4 article-c5";
+    }
+}
+
+.sidebar {
+    background-color: #0062d2;
+    grid-area: sidebar;
+}
+
+.article--c3 {
+    background-color: #a4d2f7;
+    grid-area: article-c3;
+}
+
+.article--c4 {
+    background-color: #d5dfef;
+    grid-area: article-c4;
+}
+
+.article--c5 {
+    background-color: #b0e1e5;
+    grid-area: article-c5;
+}
+
+.gridContainer-2 {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 95%;
+    height: 45%;
+    display: grid;
+    margin: 0 auto;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    grid-template-areas:
+        "nav nav"
+        "logo logo"
+        "main main";
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+        height: 20%;
+        grid-template: repeat(1, auto) / repeat(3, auto);
+        grid-template-areas: "nav logo main";
+    }
+    @media screen and (min-width: 800px) {
+        height: 30%;
+        grid-template: repeat(2, auto) / repeat(9, auto);
+        grid-template-areas:
+            "logo logo logo logo logo logo nav nav nav"
+            "main main main main main main main main main";
+    }
+}
+
+.navigation--c1 {
+    background-color: #003476;
+    grid-area: nav;
+}
+
+.logo--c2 {
+    background-color: #0062d2;
+    grid-area: logo;
+}
+
+.main--c3 {
+    background-color: #a4d2f7;
+    grid-area: main;
+}
+
+.gridContainer-3 {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 95%;
+    height: 45%;
+    display: grid;
+    margin: 0 auto;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    grid-template-areas:
+        "c1 c1"
+        "c2 c2"
+        "c3 c3";
+    @media screen and (min-width: 600px) {
+        grid-template: repeat(2, auto) / repeat(3, auto);
+        grid-template-areas:
+            "c1 c2 c2"
+            "c1 c3 c3";
+    }
+    @media screen and (min-width: 800px) {
+        width: 51%;
+        height: 54%;
+    }
+}
+
+.art--c1 {
+    background-color: #003476;
+    grid-area: c1;
+    @media screen and (min-width: 600px) {
+        background-color: #008080;
+    }
+}
+
+.art--c2 {
+    background-color: #0062d2;
+    grid-area: c2;
+    @media screen and (min-width: 600px) {
+        background-color: #ff69b4;
+    }
+}
+
+.art--c3 {
+    background-color: #a4d2f7;
+    grid-area: c3;
+    @media screen and (min-width: 600px) {
+        background-color: #a4d2f7;
+    }
+}
